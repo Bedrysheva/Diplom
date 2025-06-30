@@ -10,6 +10,7 @@
     <value>Связанные документы</value>
   </synonym>
   <type>
+    <types>DocumentRef.ВКМ_ОбслуживаниеКлиента</types>
     <types>DocumentRef.ЗаказПокупателя</types>
     <types>DocumentRef.РеализацияТоваровУслуг</types>
     <types>DocumentRef.ОплатаОтПокупателя</types>

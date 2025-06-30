@@ -132,5 +132,6 @@
   <content>Constant.РежимОчисткиФайлов</content>
   <content>Enum.РежимыОчисткиФайлов</content>
   <content>Constant.ПутьКТомуБезУчетаРегиональныхНастроек</content>
+  <content>Catalog.ВКМ_ОбслуживаниеКлиентаПрисоединенныеФайлы</content>
   <parentSubsystem>Subsystem.СтандартныеПодсистемы</parentSubsystem>
 </mdclass:Subsystem>
