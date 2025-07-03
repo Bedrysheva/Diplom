@@ -201,6 +201,17 @@
 		</right>
 	</object>
 	<object>
+		<name>DataProcessor.ВКМ_МассовоеСозданиеАктов</name>
+		<right>
+			<name>Use</name>
+			<value>true</value>
+		</right>
+		<right>
+			<name>View</name>
+			<value>true</value>
+		</right>
+	</object>
+	<object>
 		<name>CommonForm.РедактированиеДополнительныхСведений</name>
 		<right>
 			<name>View</name>

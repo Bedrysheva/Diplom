@@ -19464,6 +19464,17 @@
 		</right>
 	</object>
 	<object>
+		<name>DataProcessor.ВКМ_МассовоеСозданиеАктов</name>
+		<right>
+			<name>Use</name>
+			<value>true</value>
+		</right>
+		<right>
+			<name>View</name>
+			<value>true</value>
+		</right>
+	</object>
+	<object>
 		<name>Catalog.ПоступлениеТоваровУслугПрисоединенныеФайлы.Attribute.ПодписанЭП</name>
 		<right>
 			<name>View</name>
