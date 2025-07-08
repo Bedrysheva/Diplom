@@ -76,6 +76,10 @@
       <visible/>
     </visibilityFragments>
     <visibilityFragments>
+      <command>Catalog.НаборыДополнительныхРеквизитовИСведений.Command.Метки</command>
+      <visible/>
+    </visibilityFragments>
+    <visibilityFragments>
       <command>Catalog.ГруппыВнешнихПользователей.StandardCommand.OpenList</command>
       <visible/>
     </visibilityFragments>
@@ -100,6 +104,12 @@
       <visible/>
     </visibilityFragments>
     <visibilityFragments>
+      <command>CommonCommand.ПанельОтчетовАдминистрирование</command>
+      <visible>
+        <common>true</common>
+      </visible>
+    </visibilityFragments>
+    <visibilityFragments>
       <command>Report.АнализЖурналаРегистрации.StandardCommand.Open</command>
       <visible/>
     </visibilityFragments>
@@ -113,6 +123,10 @@
     </visibilityFragments>
     <visibilityFragments>
       <command>Report.ОценкаПроизводительности.StandardCommand.Open</command>
+      <visible/>
+    </visibilityFragments>
+    <visibilityFragments>
+      <command>Report.ПраваРолей.StandardCommand.Open</command>
       <visible/>
     </visibilityFragments>
     <visibilityFragments>
@@ -231,14 +245,6 @@
       <command>DataProcessor.ПодключениеОбсуждений.Command.НастройкиСообщенийИзДругихПрограмм</command>
       <visible/>
     </visibilityFragments>
-    <visibilityFragments>
-      <command>Report.ПраваРолей.StandardCommand.Open</command>
-      <visible/>
-    </visibilityFragments>
-    <visibilityFragments>
-      <command>Catalog.НаборыДополнительныхРеквизитовИСведений.Command.Метки</command>
-      <visible/>
-    </visibilityFragments>
   </commandsVisibility>
   <commandsPlacement>
     <placementFragments>
@@ -299,6 +305,7 @@
       <commands>InformationRegister.НастройкиОчисткиФайлов.StandardCommand.OpenList</commands>
       <commands>CommonCommand.ВремяТекущегоСеанса</commands>
       <commands>Catalog.ПрофилиКлючевыхОпераций.StandardCommand.OpenList</commands>
+      <commands>Catalog.НаборыДополнительныхРеквизитовИСведений.Command.Метки</commands>
     </orderFragments>
     <orderFragments>
       <group>NavigationPanelSeeAlso</group>
@@ -308,6 +315,20 @@
       <commands>DataProcessor.УдалениеПомеченныхОбъектов.Command.УдалениеПомеченныхОбъектов</commands>
       <commands>DataProcessor.ПоискИУдалениеДублей.Command.ПоискИУдалениеДублей</commands>
       <commands>Catalog.УчетныеЗаписиЭлектроннойПочты.StandardCommand.OpenList</commands>
+    </orderFragments>
+    <orderFragments>
+      <group>ActionsPanelReports</group>
+      <commands>CommonCommand.ПанельОтчетовАдминистрирование</commands>
+      <commands>CommonCommand.ДополнительныеОтчетыАдминистрирование</commands>
+      <commands>Report.АнализЖурналаРегистрации.StandardCommand.Open</commands>
+      <commands>Report.АнализПравДоступа.StandardCommand.Open</commands>
+      <commands>Report.ОбъемНенужныхФайлов.StandardCommand.Open</commands>
+      <commands>Report.ОценкаПроизводительности.StandardCommand.Open</commands>
+      <commands>Report.ПраваРолей.StandardCommand.Open</commands>
+      <commands>Report.ПрогрессОтложенногоОбновления.StandardCommand.Open</commands>
+      <commands>Report.СведенияОПользователях.StandardCommand.Open</commands>
+      <commands>Report.УниверсальныйОтчет.StandardCommand.Open</commands>
+      <commands>Report.ДлительностьОтложенногоОбновления.StandardCommand.Open</commands>
     </orderFragments>
     <orderFragments>
       <group>ActionsPanelTools</group>
@@ -337,19 +358,7 @@
       <commands>DataProcessor.ПодключениеОбсуждений.StandardCommand.Open</commands>
       <commands>CommonForm.ВосстановлениеПаролей.StandardCommand.Open</commands>
       <commands>DataProcessor.ПодключениеОбсуждений.Command.НастройкиСообщенийИзДругихПрограмм</commands>
-    </orderFragments>
-    <orderFragments>
-      <group>ActionsPanelReports</group>
-      <commands>CommonCommand.ПанельОтчетовАдминистрирование</commands>
-      <commands>CommonCommand.ДополнительныеОтчетыАдминистрирование</commands>
-      <commands>Report.АнализЖурналаРегистрации.StandardCommand.Open</commands>
-      <commands>Report.АнализПравДоступа.StandardCommand.Open</commands>
-      <commands>Report.ОбъемНенужныхФайлов.StandardCommand.Open</commands>
-      <commands>Report.ОценкаПроизводительности.StandardCommand.Open</commands>
-      <commands>Report.ПраваРолей.StandardCommand.Open</commands>
-      <commands>Report.ПрогрессОтложенногоОбновления.StandardCommand.Open</commands>
-      <commands>Report.СведенияОПользователях.StandardCommand.Open</commands>
-      <commands>Report.УниверсальныйОтчет.StandardCommand.Open</commands>
+      <commands>CommonForm.ВКМ_ФормаКонстант.StandardCommand.Open</commands>
     </orderFragments>
   </commandsOrder>
 </cmi:CommandInterface>

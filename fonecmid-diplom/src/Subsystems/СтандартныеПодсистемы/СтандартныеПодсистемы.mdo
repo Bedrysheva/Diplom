@@ -5,7 +5,7 @@
     <key>ru</key>
     <value>Стандартные подсистемы</value>
   </synonym>
-  <content>Role.ВКМ_ДобавлениеИзменениеОбслуживаниеКлиентов</content>
+  <content>Role.ВКМ_Менеджеры</content>
   <subsystems>АнализЖурналаРегистрации</subsystems>
   <subsystems>БазоваяФункциональность</subsystems>
   <subsystems>ВариантыОтчетов</subsystems>

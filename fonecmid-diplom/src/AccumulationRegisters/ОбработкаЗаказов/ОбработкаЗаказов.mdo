@@ -103,7 +103,7 @@
       <value>Заказ</value>
     </synonym>
     <type>
-      <types>DocumentRef.ЗаказПокупателя</types>
+      <types>DocumentRef.ВКМ_ОбслуживаниеКлиента</types>
     </type>
     <minValue xsi:type="core:UndefinedValue"/>
     <maxValue xsi:type="core:UndefinedValue"/>
