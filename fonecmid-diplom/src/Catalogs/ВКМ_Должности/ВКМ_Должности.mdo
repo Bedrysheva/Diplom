@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mdclass:Catalog xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:core="http://g5.1c.ru/v8/dt/mcore" xmlns:mdclass="http://g5.1c.ru/v8/dt/metadata/mdclass" uuid="97800b6c-2c6c-4cb3-918a-044c77c76f7c">
+  <producedTypes>
+    <objectType typeId="8a22a564-c4a0-4239-bea1-a862ceae29c2" valueTypeId="7956e3f6-9b31-46e0-bf81-0005a406405b"/>
+    <refType typeId="4bc69974-565e-465b-bdc7-946ad68ef087" valueTypeId="2754a1e8-122c-4b16-822a-211c3c224103"/>
+    <selectionType typeId="0b8636f1-9dda-4318-b598-8d7494fbbbbe" valueTypeId="4e1fcbd2-3b40-4543-863d-edb76a9de8d2"/>
+    <listType typeId="23b79635-6c06-4443-a719-b4a2b27e4dc2" valueTypeId="a666abaa-2867-4535-82f6-7975b12c88e1"/>
+    <managerType typeId="01848ff9-0451-47c7-85d3-8298fcf52b09" valueTypeId="3dc88807-a6bd-432b-8daf-d4d1e9d73a1f"/>
+  </producedTypes>
+  <name>ВКМ_Должности</name>
+  <synonym>
+    <key>ru</key>
+    <value>Должности</value>
+  </synonym>
+  <useStandardCommands>true</useStandardCommands>
+  <inputByString>Catalog.ВКМ_Должности.StandardAttribute.Description</inputByString>
+  <inputByString>Catalog.ВКМ_Должности.StandardAttribute.Code</inputByString>
+  <fullTextSearchOnInputByString>DontUse</fullTextSearchOnInputByString>
+  <createOnInput>Use</createOnInput>
+  <dataLockControlMode>Managed</dataLockControlMode>
+  <fullTextSearch>Use</fullTextSearch>
+  <objectPresentation>
+    <key>ru</key>
+    <value>Должность</value>
+  </objectPresentation>
+  <listPresentation>
+    <key>ru</key>
+    <value>Должности</value>
+  </listPresentation>
+  <levelCount>2</levelCount>
+  <foldersOnTop>true</foldersOnTop>
+  <codeLength>9</codeLength>
+  <descriptionLength>150</descriptionLength>
+  <codeType>String</codeType>
+  <codeAllowedLength>Variable</codeAllowedLength>
+  <checkUnique>true</checkUnique>
+  <autonumbering>true</autonumbering>
+  <defaultPresentation>AsDescription</defaultPresentation>
+  <editType>InDialog</editType>
+  <choiceMode>BothWays</choiceMode>
+  <attributes uuid="06416351-5f8d-426f-8d08-f6ff688bb51e">
+    <name>ГрафикРаботы</name>
+    <synonym>
+      <key>ru</key>
+      <value>График работы</value>
+    </synonym>
+    <type>
+      <types>CatalogRef.ВКМ_ГрафикиРаботы</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+  </attributes>
+  <tabularSections uuid="6d266a9c-cd21-492a-989d-b8a9e71207b5">
+    <producedTypes>
+      <objectType typeId="d566f523-6176-4bf3-9de9-6e3ab98f3593" valueTypeId="576d37e5-3d2c-4644-8831-075af0999290"/>
+      <rowType typeId="5f49a5b1-c88a-4c73-8902-035369fa4807" valueTypeId="aec34aac-06ec-4ab9-b841-6ee2d689eb88"/>
+    </producedTypes>
+    <name>ЕжемесячныеНачисления</name>
+    <synonym>
+      <key>ru</key>
+      <value>Ежемесячные начисления</value>
+    </synonym>
+    <attributes uuid="456d8ac2-4505-416f-b7b6-27910353291b">
+      <name>Начисление</name>
+      <synonym>
+        <key>ru</key>
+        <value>Начисление</value>
+      </synonym>
+      <type>
+        <types>ChartOfCalculationTypesRef.ВКМ_ОсновныеНачисления</types>
+        <types>ChartOfCalculationTypesRef.ВКМ_ДополнительныеНачисления</types>
+      </type>
+      <minValue xsi:type="core:UndefinedValue"/>
+      <maxValue xsi:type="core:UndefinedValue"/>
+      <dataHistory>Use</dataHistory>
+      <fullTextSearch>Use</fullTextSearch>
+    </attributes>
+  </tabularSections>
+</mdclass:Catalog>

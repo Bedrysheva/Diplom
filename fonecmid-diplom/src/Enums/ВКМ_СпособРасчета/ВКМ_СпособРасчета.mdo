@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mdclass:Enum xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:core="http://g5.1c.ru/v8/dt/mcore" xmlns:mdclass="http://g5.1c.ru/v8/dt/metadata/mdclass" uuid="49ac57d4-8788-4c8a-a737-441e238342b9">
+  <producedTypes>
+    <refType typeId="2f346d93-3d56-4271-b489-edaf381f61c6" valueTypeId="bed5f813-60d0-487d-8cd2-69487a11ed93"/>
+    <listType typeId="58edb5c5-e3e9-48ce-aaf6-4aea8a141ae2" valueTypeId="105d82bf-df9d-418f-bc30-662328bef1ea"/>
+    <managerType typeId="f165932b-7f78-4f2d-8c53-924ec9720a97" valueTypeId="0fa3f6cc-4f55-48ab-87cf-95fcc205124a"/>
+  </producedTypes>
+  <name>ВКМ_СпособРасчета</name>
+  <synonym>
+    <key>ru</key>
+    <value>ВКМ способ расчета</value>
+  </synonym>
+  <standardAttributes>
+    <dataHistory>Use</dataHistory>
+    <name>Order</name>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+  </standardAttributes>
+  <standardAttributes>
+    <dataHistory>Use</dataHistory>
+    <name>Ref</name>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+  </standardAttributes>
+  <quickChoice>true</quickChoice>
+  <choiceMode>BothWays</choiceMode>
+  <enumValues uuid="6543f437-7583-4547-a2c3-fc7b75b9f77f">
+    <name>ФиксированнаяСумма</name>
+    <synonym>
+      <key>ru</key>
+      <value>Фиксированная сумма</value>
+    </synonym>
+  </enumValues>
+  <enumValues uuid="0a47cfd7-b290-49cc-94de-44f39188a416">
+    <name>ПроцентОтРабот</name>
+    <synonym>
+      <key>ru</key>
+      <value>Процент от работ</value>
+    </synonym>
+  </enumValues>
+  <enumValues uuid="6290fea5-8b15-41cb-940a-0076d09c9c82">
+    <name>НДФЛ</name>
+    <synonym>
+      <key>ru</key>
+      <value>НДФЛ</value>
+    </synonym>
+  </enumValues>
+  <enumValues uuid="d20f75e4-217e-4ab9-9b07-a2400de47709">
+    <name>СУчетомГрафикаРабот</name>
+    <synonym>
+      <key>ru</key>
+      <value>С учетом графика работ</value>
+    </synonym>
+  </enumValues>
+</mdclass:Enum>

@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<suppress:SuppressGenericObject xmlns:suppress="http://g5.1c.ru/v8/dt/check/suppress/model" fqn="Role.ВКМ_РольБухгалтера.Rights">
+  <suppressions key="com.e1c.v8codestyle.right:right-interactive-open-external-data-processors" value="true"/>
+  <suppressions key="com.e1c.v8codestyle.right:right-interactive-open-external-reports" value="true"/>
+  <suppressions key="com.e1c.v8codestyle.right:right-start-thick-client" value="true"/>
+  <suppressions key="com.e1c.v8codestyle.right:right-start-thin-client" value="true"/>
+</suppress:SuppressGenericObject>
