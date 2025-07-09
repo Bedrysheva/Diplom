@@ -17,6 +17,10 @@
   <registerType>Turnovers</registerType>
   <dataLockControlMode>Managed</dataLockControlMode>
   <enableTotalsSplitting>true</enableTotalsSplitting>
+  <listPresentation>
+    <key>ru</key>
+    <value>Работы выполненные для клиента</value>
+  </listPresentation>
   <resources uuid="c6c9ceb9-6dac-4730-901b-f8ac1e96631c">
     <name>КоличествоЧасов</name>
     <synonym>
