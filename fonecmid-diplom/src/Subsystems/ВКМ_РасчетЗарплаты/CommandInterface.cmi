@@ -200,16 +200,6 @@
       </visible>
     </visibilityFragments>
     <visibilityFragments>
-      <command>Report.ВКМ_ВыработкаСпециалистов.StandardCommand.Open</command>
-      <visible>
-        <common>true</common>
-        <for>
-          <value>true</value>
-          <role>Role.ВКМ_РаботаСКадровымиДокументами</role>
-        </for>
-      </visible>
-    </visibilityFragments>
-    <visibilityFragments>
       <command>Report.ВКМ_РасходЗапланированныхОтпусков.StandardCommand.Open</command>
       <visible>
         <common>true</common>

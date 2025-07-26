@@ -28,11 +28,11 @@
   <content>AccumulationRegister.ВКМ_ВзаиморасчетыССотрудниками</content>
   <content>Document.ВКМ_ВыплатаЗарплаты</content>
   <content>Document.ВКМ_ГрафикОтпусков</content>
-  <content>Report.ВКМ_ВыработкаСпециалистов</content>
   <content>Report.ВКМ_РасчетыССотрудниками</content>
   <content>Report.ВКМ_РасходЗапланированныхОтпусков</content>
   <content>AccumulationRegister.ВКМ_ПланированиеОтпусков</content>
   <content>Catalog.ВКМ_Должности</content>
   <content>Catalog.ВКМ_ФизическиеЛица</content>
   <content>Catalog.ДоговорыКонтрагентов</content>
+  <content>Report.ВКМ_ВыработкаСпециалистов</content>
 </mdclass:Subsystem>

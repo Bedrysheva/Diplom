@@ -2,7 +2,7 @@
 <cmi:CommandInterface xmlns:cmi="http://g5.1c.ru/v8/dt/cmi">
   <commandsVisibility>
     <visibilityFragments>
-      <command>Catalog.ВКМ_Уведомления.StandardCommand.OpenList</command>
+      <command>AccumulationRegister.ВКМ_ВыполненныеРаботы.StandardCommand.OpenList</command>
       <visible>
         <for>
           <value>true</value>
@@ -17,7 +17,7 @@
       </visible>
     </visibilityFragments>
     <visibilityFragments>
-      <command>AccumulationRegister.ВКМ_ВыполненныеРаботы.StandardCommand.OpenList</command>
+      <command>Catalog.ВКМ_Уведомления.StandardCommand.OpenList</command>
       <visible>
         <for>
           <value>true</value>
@@ -121,14 +121,6 @@
       </visible>
     </visibilityFragments>
     <visibilityFragments>
-      <command>Catalog.ВКМ_Уведомления.StandardCommand.Create</command>
-      <visible>
-        <for>
-          <role>Role.ВКМ_РольБухгалтера</role>
-        </for>
-      </visible>
-    </visibilityFragments>
-    <visibilityFragments>
       <command>Catalog.ДоговорыКонтрагентов.StandardCommand.Create</command>
       <visible>
         <for>
@@ -190,6 +182,14 @@
       </visible>
     </visibilityFragments>
     <visibilityFragments>
+      <command>Catalog.ВКМ_Уведомления.StandardCommand.Create</command>
+      <visible>
+        <for>
+          <role>Role.ВКМ_РольБухгалтера</role>
+        </for>
+      </visible>
+    </visibilityFragments>
+    <visibilityFragments>
       <command>Report.ВКМ_АнализВыставленныхАктов.StandardCommand.Open</command>
       <visible>
         <common>true</common>
@@ -212,6 +212,10 @@
         <for>
           <value>true</value>
           <role>Role.ВКМ_Менеджеры</role>
+        </for>
+        <for>
+          <value>true</value>
+          <role>Role.ВКМ_Специалисты</role>
         </for>
       </visible>
     </visibilityFragments>

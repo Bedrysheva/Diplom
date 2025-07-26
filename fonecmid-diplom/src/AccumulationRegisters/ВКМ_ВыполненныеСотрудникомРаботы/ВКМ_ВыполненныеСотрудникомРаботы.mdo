@@ -84,6 +84,23 @@
     <maxValue xsi:type="core:UndefinedValue"/>
     <fullTextSearch>Use</fullTextSearch>
   </resources>
+  <resources uuid="8b85a20c-2406-4554-8953-4b43d10ff824">
+    <name>СуммаКонтрагенту</name>
+    <synonym>
+      <key>ru</key>
+      <value>Сумма контрагенту</value>
+    </synonym>
+    <type>
+      <types>Number</types>
+      <numberQualifiers>
+        <precision>15</precision>
+        <scale>2</scale>
+      </numberQualifiers>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+  </resources>
   <dimensions uuid="7de438d2-4b81-4283-a090-a112f04c4e9f">
     <name>Сотрудник</name>
     <synonym>

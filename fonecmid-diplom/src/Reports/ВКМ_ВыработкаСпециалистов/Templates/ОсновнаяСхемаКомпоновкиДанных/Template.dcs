@@ -24,25 +24,60 @@
 			</title>
 		</field>
 		<field xsi:type="DataSetFieldField">
-			<dataPath>СуммаОплатыОборот</dataPath>
-			<field>СуммаОплатыОборот</field>
+			<dataPath>СуммаНачислена</dataPath>
+			<field>СуммаНачислена</field>
 			<title xsi:type="v8:LocalStringType">
 				<v8:item>
 					<v8:lang>ru</v8:lang>
-					<v8:content>Сумма, руб</v8:content>
+					<v8:content>Сумма начислена</v8:content>
 				</v8:item>
 			</title>
 		</field>
 		<dataSource>ИсточникДанных1</dataSource>
 		<query>ВЫБРАТЬ
-	ВКМ_ВыполненныеСотрудникомРаботыОбороты.Сотрудник,
-	СУММА(ВКМ_ВыполненныеСотрудникомРаботыОбороты.ЧасовКОплатеОборот) КАК ЧасовКОплатеОборот,
-	СУММА(ВКМ_ВыполненныеСотрудникомРаботыОбороты.СуммаОплатыОборот) КАК СуммаОплатыОборот
+	ВКМ_ВыполненныеСотрудникомРаботыОбороты.Период КАК Период,
+	ВКМ_ВыполненныеСотрудникомРаботыОбороты.Сотрудник КАК Сотрудник,
+	ВКМ_ВыполненныеСотрудникомРаботыОбороты.СуммаКонтрагентуОборот КАК СуммаКонтрагентуОборот,
+	ВКМ_УсловияОплатыСотрудников.ПроцентОтРабот КАК ПроцентОтРабот,
+	ВКМ_УсловияОплатыСотрудников.Период КАК ПериодУсловий,
+	ВКМ_ВыполненныеСотрудникомРаботыОбороты.ЧасовКОплатеОборот КАК ЧасовКОплатеОборот
+ПОМЕСТИТЬ ВТ
 ИЗ
-	РегистрНакопления.ВКМ_ВыполненныеСотрудникомРаботы.Обороты(&amp;НачалоПериода, &amp;КонецПериода,,) КАК
-		ВКМ_ВыполненныеСотрудникомРаботыОбороты
+	РегистрНакопления.ВКМ_ВыполненныеСотрудникомРаботы.Обороты(&amp;НачалоПериода, &amp;КонецПериода, Месяц, ) КАК ВКМ_ВыполненныеСотрудникомРаботыОбороты
+		ЛЕВОЕ СОЕДИНЕНИЕ РегистрСведений.ВКМ_УсловияОплатыСотрудников КАК ВКМ_УсловияОплатыСотрудников
+		ПО ВКМ_ВыполненныеСотрудникомРаботыОбороты.Сотрудник = ВКМ_УсловияОплатыСотрудников.Сотрудник
+;
+
+////////////////////////////////////////////////////////////////////////////////
+ВЫБРАТЬ
+	ВременнаяТаблица.Период КАК Период,
+	МАКСИМУМ(ВременнаяТаблица.ПериодУсловий) КАК ПериодУсловий,
+	ВременнаяТаблица.Сотрудник КАК Сотрудник
+ПОМЕСТИТЬ ВТ_Максимумы
+ИЗ
+	ВТ КАК ВременнаяТаблица
+ГДЕ
+	ВременнаяТаблица.Период &gt;= ВременнаяТаблица.ПериодУсловий
+
 СГРУППИРОВАТЬ ПО
-	ВКМ_ВыполненныеСотрудникомРаботыОбороты.Сотрудник</query>
+	ВременнаяТаблица.Период,
+	ВременнаяТаблица.Сотрудник
+;
+
+////////////////////////////////////////////////////////////////////////////////
+ВЫБРАТЬ
+	ВТ.Сотрудник КАК Сотрудник,
+	СУММА(ВТ.СуммаКонтрагентуОборот * ВТ.ПроцентОтРабот / 100) КАК СуммаНачислена,
+	СУММА(ВТ.ЧасовКОплатеОборот) КАК ЧасовКОплатеОборот
+ИЗ
+	ВТ КАК ВТ
+		ВНУТРЕННЕЕ СОЕДИНЕНИЕ ВТ_Максимумы КАК ВТ_Максимумы
+		ПО ВТ.ПериодУсловий = ВТ_Максимумы.ПериодУсловий
+			И ВТ.Сотрудник = ВТ_Максимумы.Сотрудник
+			И ВТ.Период = ВТ_Максимумы.Период
+
+СГРУППИРОВАТЬ ПО
+	ВТ.Сотрудник</query>
 	</dataSet>
 	<parameter>
 		<name>НачалоПериода</name>
@@ -97,13 +132,21 @@
 		<valueType>
 			<v8:Type>v8:StandardPeriod</v8:Type>
 		</valueType>
-		<value xsi:nil="true"/>
+		<value xsi:type="v8:StandardPeriod">
+			<v8:variant xsi:type="v8:StandardPeriodVariant">Custom</v8:variant>
+			<v8:startDate>0001-01-01T00:00:00</v8:startDate>
+			<v8:endDate>0001-01-01T00:00:00</v8:endDate>
+		</value>
 		<useRestriction>false</useRestriction>
-		<use>Always</use>
 	</parameter>
 	<settingsVariant>
 		<dcsset:name>Основной</dcsset:name>
-		<dcsset:presentation xsi:type="xs:string">Основной</dcsset:presentation>
+		<dcsset:presentation xsi:type="v8:LocalStringType">
+			<v8:item>
+				<v8:lang>ru</v8:lang>
+				<v8:content>Выработка специалистов </v8:content>
+			</v8:item>
+		</dcsset:presentation>
 		<dcsset:settings xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows">
 			<dcsset:selection>
 				<dcsset:item xsi:type="dcsset:SelectedItemField">
@@ -113,19 +156,10 @@
 					<dcsset:field>ЧасовКОплатеОборот</dcsset:field>
 				</dcsset:item>
 				<dcsset:item xsi:type="dcsset:SelectedItemField">
-					<dcsset:field>СуммаОплатыОборот</dcsset:field>
+					<dcsset:field>СуммаНачислена</dcsset:field>
 				</dcsset:item>
 			</dcsset:selection>
 			<dcsset:dataParameters>
-				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
-					<dcscor:parameter>Период</dcscor:parameter>
-					<dcscor:value xsi:type="v8:StandardPeriod">
-						<v8:variant xsi:type="v8:StandardPeriodVariant">Custom</v8:variant>
-						<v8:startDate>0001-01-01T00:00:00</v8:startDate>
-						<v8:endDate>0001-01-01T00:00:00</v8:endDate>
-					</dcscor:value>
-					<dcsset:userSettingID>daccbcaf-9770-4f2f-b5e7-6540bfa63dc5</dcsset:userSettingID>
-				</dcscor:item>
 				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
 					<dcscor:use>false</dcscor:use>
 					<dcscor:parameter>НачалоПериода</dcscor:parameter>
@@ -135,6 +169,15 @@
 					<dcscor:use>false</dcscor:use>
 					<dcscor:parameter>КонецПериода</dcscor:parameter>
 					<dcscor:value xsi:nil="true"/>
+				</dcscor:item>
+				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+					<dcscor:parameter>Период</dcscor:parameter>
+					<dcscor:value xsi:type="v8:StandardPeriod">
+						<v8:variant xsi:type="v8:StandardPeriodVariant">Custom</v8:variant>
+						<v8:startDate>0001-01-01T00:00:00</v8:startDate>
+						<v8:endDate>0001-01-01T00:00:00</v8:endDate>
+					</dcscor:value>
+					<dcsset:userSettingID>879a075e-7db5-4691-ba32-43fda3982822</dcsset:userSettingID>
 				</dcscor:item>
 			</dcsset:dataParameters>
 			<dcsset:item xsi:type="dcsset:StructureItemGroup">

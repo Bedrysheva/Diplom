@@ -175,6 +175,7 @@
           <role>Role.ВКМ_РаботаСКадровымиДокументами</role>
         </for>
         <for>
+          <value>true</value>
           <role>Role.ВКМ_Специалисты</role>
         </for>
       </visibility>
